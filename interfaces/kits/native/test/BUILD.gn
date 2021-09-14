@@ -31,7 +31,8 @@ ohos_unittest("pixlmapndktest") {
     "//third_party/googletest:gtest_main",
     "//utils/native/base:utils",
   ]
-#  external_deps = [ "hilog:libhilog" ]
+
+  #  external_deps = [ "hilog:libhilog" ]
   resource_config_file =
       "//foundation/multimedia/image_standard/test/resource/image/ohos_test.xml"
 }

@@ -24,7 +24,8 @@ config("log_mock_config") {
 
 ohos_static_library("log_mock_static") {
   configs = [ ":log_mock_config" ]
-  sources = [ "//foundation/multimedia/image_standard/mock/native/src/HiLog.cpp" ]
+  sources =
+      [ "//foundation/multimedia/image_standard/mock/native/src/HiLog.cpp" ]
   subsystem_name = "multimedia"
 }
 
@@ -34,7 +35,6 @@ config("utils_mock_config") {
     "//foundation/multimedia/image_standard/mock/native/include",
     "//foundation/multimedia/utils/include",
     "//foundation/multimedia/image_standard/interfaces/innerkits/include",
- 
   ]
 }
 

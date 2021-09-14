@@ -36,13 +36,14 @@ ohos_shared_library("image_ndk_test_jni") {
   configs = [ ":image_ndk_test_jni_config" ]
 
   deps = [
-    "//foundation/multimedia/image_standard/interfaces/kits/native:multimedia_target",
-#    "//utils/jni:utils_jnikit",
-    "//utils/native/base:utils",
     "//base/hiviewdfx/hilog/frameworks/native:libhilogutil",
+    "//foundation/multimedia/image_standard/interfaces/kits/native:multimedia_target",
+
+    #    "//utils/jni:utils_jnikit",
+    "//utils/native/base:utils",
   ]
 
-#  external_deps = [ "hilog:libhilog" ]
+  #  external_deps = [ "hilog:libhilog" ]
 
   subsystem_name = "multimedia"
   part_name = "multimedia_image"

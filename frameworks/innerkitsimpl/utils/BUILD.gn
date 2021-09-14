@@ -33,7 +33,8 @@ ohos_shared_library("image_utils") {
   if (use_mingw_win) {
     defines = image_decode_windows_defines
     sources -= [ "//foundation/multimedia/image_standard/frameworks/innerkitsimpl/utils/src/image_trace.cpp" ]
-    include_dirs += [ "//foundation/multimedia/image_standard/mock/native/include" ]
+    include_dirs +=
+        [ "//foundation/multimedia/image_standard/mock/native/include" ]
     deps = [
       "//foundation/multimedia/image_standard/mock/native:log_mock_static",
       "//foundation/multimedia/image_standard/plugins/manager:pluginmanager_static",
@@ -81,7 +82,8 @@ ohos_static_library("image_utils_static") {
 
   if (use_mingw_win) {
     defines = image_decode_windows_defines
-    include_dirs += [ "//foundation/multimedia/image_standard/mock/native/include" ]
+    include_dirs +=
+        [ "//foundation/multimedia/image_standard/mock/native/include" ]
     deps = [
       "//foundation/multimedia/image_standard/mock/native:log_mock_static",
       "//foundation/multimedia/image_standard/plugins/manager:pluginmanager_static",

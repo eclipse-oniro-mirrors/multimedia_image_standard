@@ -69,8 +69,8 @@ ohos_shared_library("jpegplugin") {
     deps = [
       "//foundation/multimedia/image_standard/interfaces/innerkits:image",
       "//foundation/multimedia/image_standard/plugins/manager:pluginmanager",
-      "//utils/native/base:utils",
       "//third_party/libjpeg:libjpeg_static",
+      "//utils/native/base:utils",
     ]
 
     if (DUAL_ADAPTER) {

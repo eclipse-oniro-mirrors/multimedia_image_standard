@@ -39,14 +39,16 @@ ohos_shared_library("imageformatagent") {
 
   if (use_mingw_win) {
     defines = image_decode_windows_defines
-    include_dirs += [ "//foundation/multimedia/image_standard/mock/native/include" ]
+    include_dirs +=
+        [ "//foundation/multimedia/image_standard/mock/native/include" ]
     deps = [
       "//foundation/multimedia/image_standard/mock/native:log_mock_static",
       "//foundation/multimedia/image_standard/plugins/manager:pluginmanager_static",
     ]
   } else if (use_clang_mac) {
     defines = image_decode_mac_defines
-    include_dirs += [ "//foundation/multimedia/image_standard/mock/native/include" ]
+    include_dirs +=
+        [ "//foundation/multimedia/image_standard/mock/native/include" ]
     deps = [
       "//foundation/multimedia/image_standard/mock/native:log_mock_static",
       "//foundation/multimedia/image_standard/plugins/manager:pluginmanager_static",
@@ -58,7 +60,7 @@ ohos_shared_library("imageformatagent") {
       "//utils/native/base:utils",
     ]
 
-#    external_deps = [ "hilog:libhilog" ]
+    #    external_deps = [ "hilog:libhilog" ]
     external_deps = [ "hiviewdfx_hilog_native:libhilog" ]
   }
 

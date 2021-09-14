@@ -14,7 +14,6 @@
 import("//build/ohos.gni")
 import("//foundation/multimedia/image_standard/ide/image_decode_config.gni")
 
-
 ohos_shared_library("webpplugin") {
   sources = [
     "//foundation/multimedia/image_standard/plugins/common/libs/image/libwebpplugin/src/plugin_export.cpp",
@@ -39,11 +38,11 @@ ohos_shared_library("webpplugin") {
     "//third_party/expat/lib",
     "//third_party/flutter/skia/include/private",
     "//third_party/flutter/skia/third_party/externals/freetype/include/freetype",
-
   ]
   if (use_mingw_win) {
     defines = image_decode_windows_defines
-    include_dirs += [ "//foundation/multimedia/image_standard/mock/native/include" ]
+    include_dirs +=
+        [ "//foundation/multimedia/image_standard/mock/native/include" ]
 
     deps = [
       "${asdk_dir}/static_library/${target_os}_${target_cpu}:libwebp-image_static",
@@ -56,25 +55,24 @@ ohos_shared_library("webpplugin") {
 
     deps = [
       "//foundation/multimedia/image_standard/plugins/manager:pluginmanager",
-      "//utils/native/base:utils",
-      "//third_party/flutter:ace_skia_core",
+      "//third_party/flutter:ace_fontconfig.json",
       "//third_party/flutter:ace_fontmgr_ohos",
       "//third_party/flutter:ace_fontmgr_standard",
-      "//third_party/flutter:ace_skcms",
-      "//third_party/flutter:ace_png",
-      "//third_party/flutter:ace_libpng",
       "//third_party/flutter:ace_jpeg",
+      "//third_party/flutter:ace_jsoncpp",
+      "//third_party/flutter:ace_libfreetype2",
       "//third_party/flutter:ace_libjpeg",
-      "//third_party/flutter:ace_webp",
+      "//third_party/flutter:ace_libpng",
       "//third_party/flutter:ace_libwebp",
+      "//third_party/flutter:ace_png",
+      "//third_party/flutter:ace_skcms",
+      "//third_party/flutter:ace_skia_core",
+      "//third_party/flutter:ace_skia_ohos",
       "//third_party/flutter:ace_skia_opts",
       "//third_party/flutter:ace_typeface_freetype",
-      "//third_party/flutter:ace_skia_ohos",
-      "//third_party/flutter:ace_libfreetype2",
-      "//third_party/flutter:ace_fontconfig.json",
-      "//third_party/flutter:ace_jsoncpp",
+      "//third_party/flutter:ace_webp",
       "//utils/native/base:utils",
-
+      "//utils/native/base:utils",
     ]
 
     if (DUAL_ADAPTER) {

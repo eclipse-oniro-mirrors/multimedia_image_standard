@@ -37,25 +37,27 @@ group("multimediaplugin") {
       "image/formatagentplugin:imageformatagent",
       "image/libgifplugin:gifplugin",
       "image/libgifplugin:gifpluginmetadata",
-#      "image/libheifplugin:heifplugin",
-#      "image/libheifplugin:heifpluginmetadata",
+
+      #      "image/libheifplugin:heifplugin",
+      #      "image/libheifplugin:heifpluginmetadata",
       "image/libjpegplugin:jpegplugin",
       "image/libjpegplugin:jpegpluginmetadata",
       "image/libpngplugin:pngplugin",
       "image/libpngplugin:pngpluginmetadata",
       "image/libwebpplugin:webpplugin",
       "image/libwebpplugin:webppluginmetadata",
-#      "//foundation/multimedia/image_standard/adapter/frameworks/libhwjpegplugin:hwjpegplugin",
-#      "//foundation/multimedia/image_standard/adapter/frameworks/libhwjpegplugin:hwjpegpluginmetadata",
+
+      #      "//foundation/multimedia/image_standard/adapter/frameworks/libhwjpegplugin:hwjpegplugin",
+      #      "//foundation/multimedia/image_standard/adapter/frameworks/libhwjpegplugin:hwjpegpluginmetadata",
     ]
     if (DUAL_ADAPTER) {
       deps += [
-#        "//foundation/multimedia/image_standard/adapter/frameworks/libbmpplugin:bmpplugin",
-#        "//foundation/multimedia/image_standard/adapter/frameworks/libbmpplugin:bmppluginmetadata",
-#        "//foundation/multimedia/image_standard/adapter/frameworks/librawplugin:rawplugin",
-#        "//foundation/multimedia/image_standard/adapter/frameworks/librawplugin:rawpluginmetadata",
-#        "//foundation/multimedia/image_standard/adapter/frameworks/libwbmpplugin:wbmpplugin",
-#        "//foundation/multimedia/image_standard/adapter/frameworks/libwbmpplugin:wbmppluginmetadata",
+        #        "//foundation/multimedia/image_standard/adapter/frameworks/libbmpplugin:bmpplugin",
+        #        "//foundation/multimedia/image_standard/adapter/frameworks/libbmpplugin:bmppluginmetadata",
+        #        "//foundation/multimedia/image_standard/adapter/frameworks/librawplugin:rawplugin",
+        #        "//foundation/multimedia/image_standard/adapter/frameworks/librawplugin:rawpluginmetadata",
+        #        "//foundation/multimedia/image_standard/adapter/frameworks/libwbmpplugin:wbmpplugin",
+        #        "//foundation/multimedia/image_standard/adapter/frameworks/libwbmpplugin:wbmppluginmetadata",
       ]
     }
   }
