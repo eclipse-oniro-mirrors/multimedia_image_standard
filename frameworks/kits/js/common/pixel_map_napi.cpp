@@ -457,7 +457,7 @@ napi_value PixelMapNapi::CreatePixelMap(napi_env env, napi_callback_info info)
     //we are static method!
     //thisVar is nullptr here
     IMG_NAPI_CHECK_RET_D(IMG_IS_OK(status), nullptr, HiLog::Error(LABEL, "fail to napi_get_cb_info"));
-    IMG_NAPI_CHECK_RET_D(argCount >= 2, nullptr, HiLog::Error(LABEL, "CreatePixelMap args count mismatch %{public}d", argCount));
+    //IMG_NAPI_CHECK_RET_D(argCount >= 2, nullptr, HiLog::Error(LABEL, "CreatePixelMap args count mismatch %{public}d", argCount));
 
     std::unique_ptr<PixelMapAsyncContext> asyncContext = std::make_unique<PixelMapAsyncContext>();
 //     status = napi_unwrap(env, thisVar, reinterpret_cast<void**>(&asyncContext->nConstructor));
@@ -556,7 +556,7 @@ napi_value PixelMapNapi::ReadPixelsToBuffer(napi_env env, napi_callback_info inf
     IMG_JS_ARGS(env, info, status, argCount, argValue, thisVar);
 
     IMG_NAPI_CHECK_RET_D(IMG_IS_OK(status), nullptr, HiLog::Error(LABEL, "fail to napi_get_cb_info"));
-    IMG_NAPI_CHECK_RET_D(argCount >= 1, nullptr, HiLog::Error(LABEL, "ReadPixelsToBuffer args count mismatch %{public}d", argCount));
+    //IMG_NAPI_CHECK_RET_D(argCount >= 1, nullptr, HiLog::Error(LABEL, "ReadPixelsToBuffer args count mismatch %{public}d", argCount));
 
     std::unique_ptr<PixelMapAsyncContext> asyncContext = std::make_unique<PixelMapAsyncContext>();
     status = napi_unwrap(env, thisVar, reinterpret_cast<void**>(&asyncContext->nConstructor));
@@ -615,7 +615,7 @@ napi_value PixelMapNapi::ReadPixels(napi_env env, napi_callback_info info)
     IMG_JS_ARGS(env, info, status, argCount, argValue, thisVar);
 
     IMG_NAPI_CHECK_RET_D(IMG_IS_OK(status), nullptr, HiLog::Error(LABEL, "fail to napi_get_cb_info"));
-    IMG_NAPI_CHECK_RET_D(argCount >= 1, nullptr, HiLog::Error(LABEL, "ReadPixels args count mismatch %{public}d", argCount));
+    //IMG_NAPI_CHECK_RET_D(argCount >= 1, nullptr, HiLog::Error(LABEL, "ReadPixels args count mismatch %{public}d", argCount));
 
     std::unique_ptr<PixelMapAsyncContext> asyncContext = std::make_unique<PixelMapAsyncContext>();
     status = napi_unwrap(env, thisVar, reinterpret_cast<void**>(&asyncContext->nConstructor));
@@ -671,7 +671,7 @@ napi_value PixelMapNapi::WritePixels(napi_env env, napi_callback_info info)
     IMG_JS_ARGS(env, info, status, argCount, argValue, thisVar);
 
     IMG_NAPI_CHECK_RET_D(IMG_IS_OK(status), nullptr, HiLog::Error(LABEL, "fail to napi_get_cb_info"));
-    IMG_NAPI_CHECK_RET_D(argCount >= 1, nullptr, HiLog::Error(LABEL, "WritePixels args count mismatch %{public}d", argCount));
+    //IMG_NAPI_CHECK_RET_D(argCount >= 1, nullptr, HiLog::Error(LABEL, "WritePixels args count mismatch %{public}d", argCount));
 
     std::unique_ptr<PixelMapAsyncContext> asyncContext = std::make_unique<PixelMapAsyncContext>();
     status = napi_unwrap(env, thisVar, reinterpret_cast<void**>(&asyncContext->nConstructor));
@@ -728,7 +728,7 @@ napi_value PixelMapNapi::WriteBufferToPixels(napi_env env, napi_callback_info in
     IMG_JS_ARGS(env, info, status, argCount, argValue, thisVar);
 
     IMG_NAPI_CHECK_RET_D(IMG_IS_OK(status), nullptr, HiLog::Error(LABEL, "fail to napi_get_cb_info"));
-    IMG_NAPI_CHECK_RET_D(argCount >= 1, nullptr, HiLog::Error(LABEL, "WriteBufferToPixels args count mismatch %{public}d", argCount));
+    //IMG_NAPI_CHECK_RET_D(argCount >= 1, nullptr, HiLog::Error(LABEL, "WriteBufferToPixels args count mismatch %{public}d", argCount));
 
     std::unique_ptr<PixelMapAsyncContext> asyncContext = std::make_unique<PixelMapAsyncContext>();
     status = napi_unwrap(env, thisVar, reinterpret_cast<void**>(&asyncContext->nConstructor));
