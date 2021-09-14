@@ -14,8 +14,6 @@
 #import("//build/config/ohos/rules.gni")
 import("//build/ohos.gni")
 
-
-
 group("image_framework") {
   deps = [
     "frameworks/innerkitsimpl/utils:image_utils",
@@ -28,7 +26,6 @@ group("plugins") {
     "plugins/common/libs:multimediaplugin",
     "plugins/manager:pluginmanager",
   ]
-
 }
 
 group("image_test_list") {
@@ -43,8 +40,9 @@ group("image_test_list") {
 
 config("media_config") {
   defines = []
+
   #if (current_cpu == "arm64" || (current_cpu == "arm" && arm_use_neon)) {
-  if (current_cpu == "arm64" || (current_cpu == "arm")) {
+  if (current_cpu == "arm64" || current_cpu == "arm") {
     defines += [ "USE_NEON" ]
   }
 }
