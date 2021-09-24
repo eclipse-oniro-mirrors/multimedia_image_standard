@@ -27,14 +27,14 @@ do \
 do \
 { \
     className(const className&) = delete; \
-    className& operator= (const className&) = delete; \
+    (className)& operator= (const className&) = delete; \
 } while (0)
 
 #define DISALLOW_MOVE(className) \
 do \
 { \
     className(className&&) = delete; \
-    className& operator= (className&&) = delete; \
+    (className)& operator= (className&&) = delete; \
 } while (0)
 class NoCopyable {
 protected:
