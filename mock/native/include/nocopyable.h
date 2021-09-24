@@ -34,7 +34,7 @@ do \
 do \
 { \
     className(className&&) = delete; \
-    (className)& operator= (className&&) = delete; \
+    (className)& operator= ((className)&&) = delete; \
 } while (0)
 class NoCopyable {
 protected:
