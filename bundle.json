@@ -1,7 +1,7 @@
 {
     "name": "@ohos/multimedia_image_standard",
     "version": "",
-    "description": "图库",
+    "description": "图片编解码功能实现",
     "homePage": "https://gitee.com/openharmony",
     "license": "Apache V2",
     "repository": "https://gitee.com/openharmony/multimedia_image_standard",
